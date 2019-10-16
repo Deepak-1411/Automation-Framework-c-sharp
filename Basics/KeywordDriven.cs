@@ -80,7 +80,7 @@ namespace Basics
                                     driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(40);
                                     driver.Manage().Window.Maximize();
                                     Console.WriteLine("Browser and Url opened properly");
-                                    test.Log(Status.Info, "Browser and URL opened Properly");
+                                    test.Log(Status.Pass, "Browser and URL opened Properly");
                                     TakesScreenshot(stepdescription);
                                     count++;
                                 }
@@ -99,7 +99,7 @@ namespace Basics
                                     element = waitExplictly(locator);
                                     element.SendKeys(testdata);
                                     Console.WriteLine("Clicked at the locator");
-                                    test.Log(Status.Info, "Type the " + testdata + "in the" + locator);
+                                    test.Log(Status.Pass, "Type the " + testdata + "in the" + locator);
                                     TakesScreenshot(stepdescription);
                                     count++;
                                 }
@@ -118,7 +118,7 @@ namespace Basics
                                     element = waitExplictly(locator);
                                     SelectElement oSelect = new SelectElement(element);
                                     oSelect.SelectByValue(testdata);
-                                    test.Log(Status.Info, "select " + testdata + " :Form the drop down" + locator);
+                                    test.Log(Status.Pass, "select " + testdata + " :Form the drop down" + locator);
                                     TakesScreenshot(stepdescription);
                                     Console.WriteLine("Drop down action is performed and data " + testdata + " " + "is selected from Dropdown");
                                     count++;
@@ -138,7 +138,7 @@ namespace Basics
                                     element = waitExplictly(locator);
                                     SelectElement dd = new SelectElement(element);
                                     dd.SelectByValue(testdata);
-                                    test.Log(Status.Info, "select " + testdata + " :Form the drop down" + locator);
+                                    test.Log(Status.Pass, "select " + testdata + " :Form the drop down" + locator);
                                     TakesScreenshot(stepdescription);
                                     Console.WriteLine("Drop down action is performed and data " + testdata + " " + "is selected from Dropdown");
                                     count++;
@@ -159,7 +159,7 @@ namespace Basics
                                     element = waitExplictly(locator);
                                     Actions act = new Actions(driver);
                                     act.DragAndDropToOffset(element, 0, result).Build().Perform();
-                                    test.Log(Status.Info, "Drag and Drop Operation perform in stip from 0 to :" + testdata);
+                                    test.Log(Status.Pass, "Drag and Drop Operation perform in stip from 0 to :" + testdata);
                                     TakesScreenshot(stepdescription);
                                     Console.WriteLine("Trying to Drag in the strip");
                                     count++;
@@ -191,7 +191,7 @@ namespace Basics
                                     TakesScreenshot(stepdescription+"fail");
                                     addFailure("Failure");
                                     button = true;
-                                    button = true;
+                                   
                                 }
                                 break;
 
@@ -218,7 +218,7 @@ namespace Basics
                                     waitExplictly(datelocator);
                                     element = driver.FindElement(datelocator);
                                     select.SelectByText(day);
-                                    test.Log(Status.Info, "Date picker operation is performed in ");
+                                    test.Log(Status.Pass, "Date picker operation is performed in ");
                                     TakesScreenshot(stepdescription);
                                     count++;
                                 }
@@ -235,7 +235,7 @@ namespace Basics
                                 try
                                 {
                                     driver.SwitchTo().Frame(testdata);
-                                    test.Log(Status.Info, "Switched to the Frame " + testdata);
+                                    test.Log(Status.Pass, "Switched to the Frame " + testdata);
                                     TakesScreenshot(stepdescription);
                                     Console.WriteLine("Switched to the frame");
                                     count++;
@@ -259,7 +259,7 @@ namespace Basics
                                     d.fixedwait(2);
                                     Actions act = new Actions(driver);
                                     act.SendKeys(Keys.PageDown).Build().Perform();
-                                    test.Log(Status.Info, "Page down action is performed");
+                                    test.Log(Status.Pass, "Page down action is performed");
                                     TakesScreenshot(stepdescription);
                                     count++;
                                 }
@@ -278,7 +278,7 @@ namespace Basics
                                     var newTab = driver.SwitchTo().Window(newTabHandle);
                                     d.fixedwait(20);
                                     driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(20);
-                                    test.Log(Status.Info, "Tab changed to the next tab");
+                                    test.Log(Status.Pass, "Tab changed to the next tab");
                                     TakesScreenshot(stepdescription);
                                     Console.WriteLine("switched to the new tab");
                                     count++;
@@ -302,7 +302,7 @@ namespace Basics
                                     d.fixedwait(2);
                                     driver.Navigate().Refresh();
                                     Console.WriteLine("Browser is refreshed");
-                                    test.Log(Status.Info, "Browser refreshed");
+                                    test.Log(Status.Pass, "Browser refreshed");
                                     TakesScreenshot(stepdescription);
                                     count++;
                                 }
@@ -319,7 +319,7 @@ namespace Basics
                                 try
                                 {
                                     driver.Navigate().GoToUrl(testdata);
-                                    test.Log(Status.Info, "Navigated to the url" + testdata);
+                                    test.Log(Status.Pass, "Navigated to the url" + testdata);
                                     TakesScreenshot(stepdescription);
                                     Console.WriteLine("Naviagated to the URL:" + testdata);
                                     count++;
@@ -337,7 +337,7 @@ namespace Basics
                                 try
                                 {
                                     driver.Navigate().Back();
-                                    test.Log(Status.Info, "Navigated back ");
+                                    test.Log(Status.Pass, "Navigated back ");
                                     TakesScreenshot(stepdescription);
                                     Console.WriteLine("Navigated back");
                                     count++;
@@ -430,7 +430,7 @@ namespace Basics
         public static  void ExtentReportGeneration(String Testname) {
             String date = DateTime.Now.ToString("HH:mm:ss");
             String date1 = date.Replace(":", "_");
-            var path = ".\\Basics\\reports";
+            var path = "D:\\csharp\\Basics\\Basics\\reports";
             extentHtmlReport = new ExtentHtmlReporter(path + "\\AutomationReport"+ Testname+"_"+ date1 + ".html");
             report = new AventStack.ExtentReports.ExtentReports();
             report.AttachReporter(extentHtmlReport);

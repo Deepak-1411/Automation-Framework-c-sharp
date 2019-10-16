@@ -113,9 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="KeywordDriven.cs" />
-    <Compile Include="Runnerclass.cs" />
-    <Compile Include="SearchAndBookHotel.cs" />
-    <Compile Include="WindowHandel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
