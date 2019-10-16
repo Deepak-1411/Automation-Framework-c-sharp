@@ -420,20 +420,17 @@ namespace Basics
         }
         public static void Main(String[] args) {
 
-       Script("D:\\csharp\\JsonData\\test1.json","Scenario1");
-       Console.WriteLine("+++++++++++++++++++++++++++++++");
+           Script("D:\\csharp\\JsonData\\test1.json","Scenario1");
            Script("D:\\csharp\\JsonData\\test2.json", "Scenario2");
-            Console.WriteLine("+++++++++++++++++++++++++++++++");
-               Script("D:\\csharp\\JsonData\\test3.json", "Scenario3");
-                Console.WriteLine("+++++++++++++++++++++++++++++++");
-            Script("C:\\Users\\MR\\Downloads\\testJSONBoA.json","BankOfAmerica");
+           Script("D:\\csharp\\JsonData\\test3.json", "Scenario3");
+           Script("C:\\Users\\MR\\Downloads\\testJSONBoA.json","BankOfAmerica");
 
         }
 
         public static  void ExtentReportGeneration(String Testname) {
             String date = DateTime.Now.ToString("HH:mm:ss");
             String date1 = date.Replace(":", "_");
-            var path = "D:\\csharp\\Basics\\Basics\\reports";
+            var path = ".\\Basics\\reports";
             extentHtmlReport = new ExtentHtmlReporter(path + "\\AutomationReport"+ Testname+"_"+ date1 + ".html");
             report = new AventStack.ExtentReports.ExtentReports();
             report.AttachReporter(extentHtmlReport);

@@ -112,13 +112,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicActions.cs" />
-    <Compile Include="ChooseCard.cs" />
     <Compile Include="KeywordDriven.cs" />
-    <Compile Include="ReadJson.cs" />
     <Compile Include="Runnerclass.cs" />
     <Compile Include="SearchAndBookHotel.cs" />
-    <Compile Include="EnrollIntoApplication.cs" />
     <Compile Include="WindowHandel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
