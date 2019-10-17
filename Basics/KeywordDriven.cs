@@ -90,13 +90,13 @@ namespace Basics
                                     driver.Manage().Window.Maximize();
                                     Console.WriteLine("Browser and Url opened properly");
                                     test.Log(Status.Pass, "Browser and URL opened Properly");
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     count++;
                                 }
                                 catch (Exception)
                                 {
                                     test.Log(Status.Fail, "Unable to launch the browser and URL");
-                                    TakesScreenshot(stepdescription + "Fail");
+                                    TakesScreenshot(stepdescription + "Fail", testname);
                                     button = true;
 
                                 }
@@ -109,13 +109,13 @@ namespace Basics
                                     element.SendKeys(testdata);
                                     Console.WriteLine("Clicked at the locator");
                                     test.Log(Status.Pass, "Type the " + testdata + "in the" + locator);
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     count++;
                                 }
                                 catch (Exception)
                                 {
                                     test.Log(Status.Fail, "Unable to enter the " + testdata + "in the" + locator);
-                                    TakesScreenshot(stepdescription+"fail");
+                                    TakesScreenshot(stepdescription+"fail", testname);
                                     button = true;
                                 }
                                 break;
@@ -128,14 +128,14 @@ namespace Basics
                                     SelectElement oSelect = new SelectElement(element);
                                     oSelect.SelectByValue(testdata);
                                     test.Log(Status.Pass, "select " + testdata + " :Form the drop down" + locator);
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     Console.WriteLine("Drop down action is performed and data " + testdata + " " + "is selected from Dropdown");
                                     count++;
                                 }
                                 catch (Exception)
                                 {
                                     test.Log(Status.Fail, "unable select " + testdata + " :Form the drop down" + locator);
-                                    TakesScreenshot(stepdescription+"fail");
+                                    TakesScreenshot(stepdescription+"fail", testname);
                                     button = true;
                                 }
                                 break;
@@ -148,13 +148,13 @@ namespace Basics
                                     SelectElement dd = new SelectElement(element);
                                     dd.SelectByValue(testdata);
                                     test.Log(Status.Pass, "select " + testdata + " :Form the drop down" + locator);
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     Console.WriteLine("Drop down action is performed and data " + testdata + " " + "is selected from Dropdown");
                                     count++;
                                 }
                                 catch (Exception)
                                 {
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     test.Log(Status.Fail, "unable to select " + testdata + " :Form the drop down" + locator);
                                     button = true;
                                 }
@@ -169,13 +169,13 @@ namespace Basics
                                     Actions act = new Actions(driver);
                                     act.DragAndDropToOffset(element, 0, result).Build().Perform();
                                     test.Log(Status.Pass, "Drag and Drop Operation perform in stip from 0 to :" + testdata);
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     Console.WriteLine("Trying to Drag in the strip");
                                     count++;
                                 }
                                 catch (Exception)
                                 {
-                                    TakesScreenshot(stepdescription+"Fail");
+                                    TakesScreenshot(stepdescription+"Fail", testname);
                                     test.Log(Status.Fail, "unable to Drag and Drop Operation perform in stip from 0 to :" + testdata);
                                     button = true;
                                 }
@@ -187,7 +187,7 @@ namespace Basics
                                 {
                                     element = waitExplictly(locator);
                                     element.Click();
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     test.Log(Status.Info, "Click operation peformed at " + locator);
                                     test.Log(Status.Pass, "Clicked at the locator");
                                     count++;
@@ -197,7 +197,7 @@ namespace Basics
                                 catch (Exception)
                                 {
                                     test.Log(Status.Fail, "Unable to Click operation peformed at " + locator);
-                                    TakesScreenshot(stepdescription+"fail");
+                                    TakesScreenshot(stepdescription+"fail", testname);
                                     addFailure("Failure");
                                     button = true;
                                    
@@ -228,12 +228,12 @@ namespace Basics
                                     element = driver.FindElement(datelocator);
                                     select.SelectByText(day);
                                     test.Log(Status.Pass, "Date picker operation is performed in ");
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     count++;
                                 }
                                 catch (Exception)
                                 {
-                                    TakesScreenshot(stepdescription + "fail");
+                                    TakesScreenshot(stepdescription + "fail", testname);
                                     test.Log(Status.Fail, "Date picker operation is not performed ");
                                     button = true;
                                 }
@@ -245,7 +245,7 @@ namespace Basics
                                 {
                                     driver.SwitchTo().Frame(testdata);
                                     test.Log(Status.Pass, "Switched to the Frame " + testdata);
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     Console.WriteLine("Switched to the frame");
                                     count++;
                                 }
@@ -269,7 +269,7 @@ namespace Basics
                                     Actions act = new Actions(driver);
                                     act.SendKeys(Keys.PageDown).Build().Perform();
                                     test.Log(Status.Pass, "Page down action is performed");
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     count++;
                                 }
                                 catch (Exception)
@@ -288,13 +288,13 @@ namespace Basics
                                     d.fixedwait(20);
                                     driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(20);
                                     test.Log(Status.Pass, "Tab changed to the next tab");
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     Console.WriteLine("switched to the new tab");
                                     count++;
                                 }
                                 catch (Exception)
                                 {
-                                    TakesScreenshot(stepdescription+"Fail");
+                                    TakesScreenshot(stepdescription+"Fail", testname);
                                     test.Log(Status.Fail,"unable to changed to the next tab");
                                     button = true;
                                 }
@@ -312,12 +312,12 @@ namespace Basics
                                     driver.Navigate().Refresh();
                                     Console.WriteLine("Browser is refreshed");
                                     test.Log(Status.Pass, "Browser refreshed");
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     count++;
                                 }
                                 catch (Exception)
                                 {
-                                    TakesScreenshot(stepdescription+"fail");
+                                    TakesScreenshot(stepdescription+"fail", testname);
                                     test.Log(Status.Fail, "error while Refreshing Browser");
                                     button = true;
                                 }
@@ -329,13 +329,13 @@ namespace Basics
                                 {
                                     driver.Navigate().GoToUrl(testdata);
                                     test.Log(Status.Pass, "Navigated to the url" + testdata);
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     Console.WriteLine("Naviagated to the URL:" + testdata);
                                     count++;
                                 }
                                 catch (Exception)
                                 {
-                                    TakesScreenshot(stepdescription+"Fail");
+                                    TakesScreenshot(stepdescription+"Fail", testname);
                                     test.Log(Status.Fail, "Navigated to the url" + testdata);
                                     button = true;
                                 }
@@ -347,13 +347,13 @@ namespace Basics
                                 {
                                     driver.Navigate().Back();
                                     test.Log(Status.Pass, "Navigated back ");
-                                    TakesScreenshot(stepdescription);
+                                    TakesScreenshot(stepdescription, testname);
                                     Console.WriteLine("Navigated back");
                                     count++;
                                 }
                                 catch (Exception)
                                 {
-                                    TakesScreenshot(stepdescription+"Fail");
+                                    TakesScreenshot(stepdescription+"Fail", testname);
                                     test.Log(Status.Fail, "Unable to Navigated back ");
                                     button = true;
                                 }
@@ -369,7 +369,7 @@ namespace Basics
                                 element = waitExplictly(locator);
                                 String text = element.Text;
 
-                                TakesScreenshot(stepdescription);
+                                TakesScreenshot(stepdescription, testname);
                                 Console.WriteLine(text);
                                 break;
                             case "getTitle":
@@ -420,19 +420,24 @@ namespace Basics
             return elem;
         }
 
-        public static void  TakesScreenshot(String stepdescription) {
-            
-         Console.WriteLine("Current working directory : " + currentpath);
-          ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(picspath +"\\"+ "_" + stepdescription + ".jpeg", ScreenshotImageFormat.Jpeg);
+        public static void  TakesScreenshot(String stepdescription,String Testname) {
+
+
+            String picturepath = picspath + "\\" + Testname ;
+            if (!Directory.Exists(picturepath)){
+                Directory.CreateDirectory(picturepath);
+            }
+        // Console.WriteLine("Current working directory : " + currentpath);
+          ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(picturepath+ "\\" + "_" + stepdescription + ".jpeg", ScreenshotImageFormat.Jpeg);
           test.AddScreenCaptureFromPath(picspath +"\\"+ "_" + stepdescription + ".jpeg");
             
 
         }
         public static void Main(String[] args) {
-          Script("D:\\csharp\\JsonData\\test1.json","Scenario1");
-        ///  Script("D:\\csharp\\JsonData\\test2.json", "Scenario2");
-        //  Script("D:\\csharp\\JsonData\\test3.json", "Scenario3");
-        //  Script("C:\\Users\\MR\\Downloads\\testJSONBoA.json","BankOfAmerica");
+         Script("D:\\csharp\\JsonData\\test1.json","Scenario1");
+         Script("D:\\csharp\\JsonData\\test2.json", "Scenario2");
+         Script("D:\\csharp\\JsonData\\test3.json", "Scenario3");
+         Script("C:\\Users\\MR\\Downloads\\testJSONBoA.json","BankOfAmerica");
 
         }
 
