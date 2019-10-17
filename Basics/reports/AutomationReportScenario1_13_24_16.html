@@ -30,8 +30,7 @@
         <!-- slideout menu -->
         <ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
             <li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-                            <li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
-            <li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+                        <li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
         </ul>
 
         <!-- report name -->
@@ -44,7 +43,7 @@
         <ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 
             <a>
-                <span class='suite-start-time label blue darken-3'>16-10-2019 16:02:40 India Standard Time</span>
+                <span class='suite-start-time label blue darken-3'>17-10-2019 13:24:16 India Standard Time</span>
             </a>
             <a>
                 <span class="label blue darken-3">3.1.0</span>
@@ -124,10 +123,10 @@
                     <canvas id='parent-analysis' width='100' height='80'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span><span class='strong'>0</span> test(s) passed</span>
+                    <span><span class='strong'>1</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong'>1</span> test(s) failed, <span class='strong'>0</span> others
+                    <span class='strong'>0</span> test(s) failed, <span class='strong'>0</span> others
                 </div>
             </div>
         </div>
@@ -139,10 +138,10 @@
                         <canvas id='child-analysis' width='100' height='80'></canvas>
                     </div>
                     <div class='block text-small'>
-                        <span><span class='strong'>7</span> step(s) passed</span>
+                        <span><span class='strong'>13</span> step(s) passed</span>
                     </div>
                     <div class='block text-small'>
-                        <span class='strong'>2</span> step(s) failed, <span class='strong'>9</span> others
+                        <span class='strong'>0</span> step(s) failed, <span class='strong'>4</span> others
                     </div>
                 </div>
             </div>
@@ -157,17 +156,17 @@
             <ul id='test-collection' class='test-collection'>
 
 
-                    <li class='test displayed active  fail' status='fail' test-id='2'>
+                    <li class='test displayed active  pass' status='pass' test-id='1'>
                         <div class='test-heading'>
-                            <span class='test-name'>Scenario2</span>
-                            <span class='test-time'>16-10-2019 16:02:40</span>
-                            <span class='test-status right fail'>Fail</span>
+                            <span class='test-name'>Scenario1</span>
+                            <span class='test-time'>17-10-2019 13:24:17</span>
+                            <span class='test-status right pass'>Pass</span>
                         </div>
                         <div class='test-content hide'>
                                 <div class='test-time-info'>
-                                    <span class='label start-time'>16-10-2019 16:02:40</span>
-                                    <span class='label end-time'>16-10-2019 16:04:02</span>
-                                    <span class='label time-taken grey lighten-1 white-text'>00:01:22.7469081</span>
+                                    <span class='label start-time'>17-10-2019 13:24:17</span>
+                                    <span class='label end-time'>17-10-2019 13:24:38</span>
+                                    <span class='label time-taken grey lighten-1 white-text'>00:00:21.3393666</span>
                                 </div>
                                     <div class='test-steps'>
                                         <table class='bordered table-results'>
@@ -179,114 +178,109 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:45</td>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>17-10-2019 13:24:22</td>
                                                         <td class='step-details'>Browser and URL opened Properly</td>
                                                     </tr>
                                                     <tr class='log' status='info'>
                                                         <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:53</td>
-                                                        <td class='step-details'>Click operation peformed at By.XPath: //*[@id='header']/header/div[2]/div/div/div[3]/div/ul/li[2]/a</td>
+                                                        <td class='timestamp'>17-10-2019 13:24:28</td>
+                                                        <td class='step-details'>Click operation peformed at By.XPath: //*[@id='jp-adobe-enrol']/button</td>
                                                     </tr>
                                                     <tr class='log' status='pass'>
                                                         <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:53</td>
+                                                        <td class='timestamp'>17-10-2019 13:24:28</td>
+                                                        <td class='step-details'>Clicked at the locator</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>17-10-2019 13:24:29</td>
+                                                        <td class='step-details'>Type the 985555555222in theBy.XPath: //*[@id='txtMobileNumber']</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>17-10-2019 13:24:29</td>
+                                                        <td class='step-details'>Type the abcxyz@pqr.comin theBy.XPath: //*[@id='txtMobileNumber']</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>17-10-2019 13:24:30</td>
+                                                        <td class='step-details'>Type the abcxyz@pqr.comin theBy.XPath: //*[@id='txtemail']</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>17-10-2019 13:24:30</td>
+                                                        <td class='step-details'>Type the Deepakin theBy.XPath: //*[@id='txtFirstName']</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>17-10-2019 13:24:31</td>
+                                                        <td class='step-details'>Type the palin theBy.XPath: //*[@id='txtlName']</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>17-10-2019 13:24:31</td>
+                                                        <td class='step-details'>Type the 14111992in theBy.XPath: //*[@id='dob']</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>17-10-2019 13:24:32</td>
+                                                        <td class='step-details'>Type the Qwerty@123in theBy.XPath: //*[@id='txtEnrollPassword']</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>17-10-2019 13:24:33</td>
+                                                        <td class='step-details'>Type the Qwerty@123in theBy.XPath: //*[@id='confirmpwdName']</td>
+                                                    </tr>
+                                                    <tr class='log' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+                                                        <td class='timestamp'>17-10-2019 13:24:34</td>
+                                                        <td class='step-details'>Click operation peformed at By.XPath: //*[@id='chkPolicyLabel']/span[1]</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>17-10-2019 13:24:34</td>
                                                         <td class='step-details'>Clicked at the locator</td>
                                                     </tr>
                                                     <tr class='log' status='info'>
                                                         <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:54</td>
-                                                        <td class='step-details'>Type the Mumbai, Indiain theBy.XPath: //*[@id='HotelsJP_HP_WS_Search_Place']</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:55</td>
-                                                        <td class='step-details'>Click operation peformed at By.XPath: //*[@id='HotelsJP_HP_WS_Search_CheckIn_Out']</td>
+                                                        <td class='timestamp'>17-10-2019 13:24:34</td>
+                                                        <td class='step-details'>Click operation peformed at By.XPath: //*[@id='chkTermsLabel']/span[1]</td>
                                                     </tr>
                                                     <tr class='log' status='pass'>
                                                         <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:55</td>
+                                                        <td class='timestamp'>17-10-2019 13:24:34</td>
                                                         <td class='step-details'>Clicked at the locator</td>
                                                     </tr>
                                                     <tr class='log' status='info'>
                                                         <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:56</td>
-                                                        <td class='step-details'>Click operation peformed at By.XPath: //*[@id='HotelsJP_Homepage_CheckIn']/div[2]/table/tbody/tr[5]/td[7]</td>
+                                                        <td class='timestamp'>17-10-2019 13:24:38</td>
+                                                        <td class='step-details'>Click operation peformed at By.XPath: //*[@id='enrollContainer']/div/div/div/div[2]/form/div/div[11]/div[2]/div[2]/span/input</td>
                                                     </tr>
                                                     <tr class='log' status='pass'>
                                                         <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:56</td>
+                                                        <td class='timestamp'>17-10-2019 13:24:38</td>
                                                         <td class='step-details'>Clicked at the locator</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:57</td>
-                                                        <td class='step-details'>Click operation peformed at By.XPath: //*[@id='HotelsJP_Homepage_CheckOut']/div[2]/table/tbody/tr[2]/td[3]</td>
-                                                    </tr>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:57</td>
-                                                        <td class='step-details'>Clicked at the locator</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:58</td>
-                                                        <td class='step-details'>Click operation peformed at By.XPath: //*[@id='hotels_rooms']</td>
-                                                    </tr>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:58</td>
-                                                        <td class='step-details'>Clicked at the locator</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:59</td>
-                                                        <td class='step-details'>Click operation peformed at By.XPath: //*[@id='firstrow']/li[1]/label</td>
-                                                    </tr>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:02:59</td>
-                                                        <td class='step-details'>Clicked at the locator</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:03:01</td>
-                                                        <td class='step-details'>Click operation peformed at By.XPath: //*[@id='HotelsJP_HP_WS_Searchbtn']</td>
-                                                    </tr>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:03:01</td>
-                                                        <td class='step-details'>Clicked at the locator</td>
-                                                    </tr>
-                                                    <tr class='log' status='fail'>
-                                                        <td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:04:01</td>
-                                                        <td class='step-details'>Unable to Click operation peformed at By.XPath: //*[@id='HotelsJP_SL_Deals_FabHotel_Atlas_Plaza_Andheri_East']</td>
-                                                    </tr>
-                                                    <tr class='log' status='fail'>
-                                                        <td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-                                                        <td class='timestamp'>16-10-2019 16:04:02</td>
-                                                        <td class='step-details'><textarea class='code-block'>   at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
-   at NUnit.Framework.Assert.Fail(String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 145
-   at NUnit.Framework.Assert.Fail(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 155
-   at Basics.KeywordDriven.addFailure(String message) in D:\csharp\Basics\Basics\KeywordDriven.cs:line 444</textarea></td>
                                                     </tr>
                                             </tbody>
                                         </table>
                                     </div>
 
                                 <ul class='screenshots'>
-                                        <li><img data-featherlight='D:\csharp\pics\_launch_the_url.jpeg' class='step-img' src='D:\csharp\pics\_launch_the_url.jpeg' data-src='D:\csharp\pics\_launch_the_url.jpeg'></li>
-                                        <li><img data-featherlight='D:\csharp\pics\_click_hotels__button.jpeg' class='step-img' src='D:\csharp\pics\_click_hotels__button.jpeg' data-src='D:\csharp\pics\_click_hotels__button.jpeg'></li>
-                                        <li><img data-featherlight='D:\csharp\pics\_enter_the_destination.jpeg' class='step-img' src='D:\csharp\pics\_enter_the_destination.jpeg' data-src='D:\csharp\pics\_enter_the_destination.jpeg'></li>
-                                        <li><img data-featherlight='D:\csharp\pics\_click_on_booking_date.jpeg' class='step-img' src='D:\csharp\pics\_click_on_booking_date.jpeg' data-src='D:\csharp\pics\_click_on_booking_date.jpeg'></li>
-                                        <li><img data-featherlight='D:\csharp\pics\_booking_date_from.jpeg' class='step-img' src='D:\csharp\pics\_booking_date_from.jpeg' data-src='D:\csharp\pics\_booking_date_from.jpeg'></li>
-                                        <li><img data-featherlight='D:\csharp\pics\_enter_to_date.jpeg' class='step-img' src='D:\csharp\pics\_enter_to_date.jpeg' data-src='D:\csharp\pics\_enter_to_date.jpeg'></li>
-                                        <li><img data-featherlight='D:\csharp\pics\_click_on_hotel_rooms_button.jpeg' class='step-img' src='D:\csharp\pics\_click_on_hotel_rooms_button.jpeg' data-src='D:\csharp\pics\_click_on_hotel_rooms_button.jpeg'></li>
-                                        <li><img data-featherlight='D:\csharp\pics\_click_on_single_rooms_.jpeg' class='step-img' src='D:\csharp\pics\_click_on_single_rooms_.jpeg' data-src='D:\csharp\pics\_click_on_single_rooms_.jpeg'></li>
-                                        <li><img data-featherlight='D:\csharp\pics\_click_on_submut_button.jpeg' class='step-img' src='D:\csharp\pics\_click_on_submut_button.jpeg' data-src='D:\csharp\pics\_click_on_submut_button.jpeg'></li>
-                                        <li><img data-featherlight='D:\csharp\pics\_click_on_book_now_button_fail.jpeg' class='step-img' src='D:\csharp\pics\_click_on_book_now_button_fail.jpeg' data-src='D:\csharp\pics\_click_on_book_now_button_fail.jpeg'></li>
+                                        <li><img data-featherlight='D:\csharp\Basics\Basics\screenshots\_launch_the_url.jpeg' class='step-img' src='D:\csharp\Basics\Basics\screenshots\_launch_the_url.jpeg' data-src='D:\csharp\Basics\Basics\screenshots\_launch_the_url.jpeg'></li>
+                                        <li><img data-featherlight='D:\csharp\Basics\Basics\screenshots\_click_enroll_button.jpeg' class='step-img' src='D:\csharp\Basics\Basics\screenshots\_click_enroll_button.jpeg' data-src='D:\csharp\Basics\Basics\screenshots\_click_enroll_button.jpeg'></li>
+                                        <li><img data-featherlight='D:\csharp\Basics\Basics\screenshots\_enter_mobile_number.jpeg' class='step-img' src='D:\csharp\Basics\Basics\screenshots\_enter_mobile_number.jpeg' data-src='D:\csharp\Basics\Basics\screenshots\_enter_mobile_number.jpeg'></li>
+                                        <li><img data-featherlight='D:\csharp\Basics\Basics\screenshots\_enter_email_id_.jpeg' class='step-img' src='D:\csharp\Basics\Basics\screenshots\_enter_email_id_.jpeg' data-src='D:\csharp\Basics\Basics\screenshots\_enter_email_id_.jpeg'></li>
+                                        <li><img data-featherlight='D:\csharp\Basics\Basics\screenshots\_enter_email_id_.jpeg' class='step-img' src='D:\csharp\Basics\Basics\screenshots\_enter_email_id_.jpeg' data-src='D:\csharp\Basics\Basics\screenshots\_enter_email_id_.jpeg'></li>
+                                        <li><img data-featherlight='D:\csharp\Basics\Basics\screenshots\_enter_first_name.jpeg' class='step-img' src='D:\csharp\Basics\Basics\screenshots\_enter_first_name.jpeg' data-src='D:\csharp\Basics\Basics\screenshots\_enter_first_name.jpeg'></li>
+                                        <li><img data-featherlight='D:\csharp\Basics\Basics\screenshots\_enter_last_name.jpeg' class='step-img' src='D:\csharp\Basics\Basics\screenshots\_enter_last_name.jpeg' data-src='D:\csharp\Basics\Basics\screenshots\_enter_last_name.jpeg'></li>
+                                        <li><img data-featherlight='D:\csharp\Basics\Basics\screenshots\_enter_date_of_birth.jpeg' class='step-img' src='D:\csharp\Basics\Basics\screenshots\_enter_date_of_birth.jpeg' data-src='D:\csharp\Basics\Basics\screenshots\_enter_date_of_birth.jpeg'></li>
+                                        <li><img data-featherlight='D:\csharp\Basics\Basics\screenshots\_creat_password.jpeg' class='step-img' src='D:\csharp\Basics\Basics\screenshots\_creat_password.jpeg' data-src='D:\csharp\Basics\Basics\screenshots\_creat_password.jpeg'></li>
+                                        <li><img data-featherlight='D:\csharp\Basics\Basics\screenshots\_confirm_password.jpeg' class='step-img' src='D:\csharp\Basics\Basics\screenshots\_confirm_password.jpeg' data-src='D:\csharp\Basics\Basics\screenshots\_confirm_password.jpeg'></li>
+                                        <li><img data-featherlight='D:\csharp\Basics\Basics\screenshots\_check_the_checkbox.jpeg' class='step-img' src='D:\csharp\Basics\Basics\screenshots\_check_the_checkbox.jpeg' data-src='D:\csharp\Basics\Basics\screenshots\_check_the_checkbox.jpeg'></li>
+                                        <li><img data-featherlight='D:\csharp\Basics\Basics\screenshots\_term_and_conditions_checkbox.jpeg' class='step-img' src='D:\csharp\Basics\Basics\screenshots\_term_and_conditions_checkbox.jpeg' data-src='D:\csharp\Basics\Basics\screenshots\_term_and_conditions_checkbox.jpeg'></li>
+                                        <li><img data-featherlight='D:\csharp\Basics\Basics\screenshots\_click_cancel_button.jpeg' class='step-img' src='D:\csharp\Basics\Basics\screenshots\_click_cancel_button.jpeg' data-src='D:\csharp\Basics\Basics\screenshots\_click_cancel_button.jpeg'></li>
                                 </ul>
                         </div>
                     </li>
@@ -343,35 +337,6 @@
                 <h5>Exceptions</h5>
                 <ul id='exception-collection' class='exception-collection'>
 
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>NUnit.Framework.AssertionException</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                            <tr>
-                                                <th>Timestamp</th>
-                                                <th>TestName</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                    <td>16-10-2019 16:02:40</td>
-                                                    <td class='linked' test-id='2'>Scenario2</td>
-                                                    <td><textarea class='code-block'>   at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
-   at NUnit.Framework.Assert.Fail(String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 145
-   at NUnit.Framework.Assert.Fail(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 155
-   at Basics.KeywordDriven.addFailure(String message) in D:\csharp\Basics\Basics\KeywordDriven.cs:line 444</textarea></td>
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
                 </ul>
             </div>
         </div>
@@ -398,25 +363,25 @@
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
- <span>Steps</span>                     <div class='panel-lead'>18</div>
+ <span>Steps</span>                     <div class='panel-lead'>17</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     Start
-                    <div class='panel-lead'>16-10-2019 16:02:40</div>
+                    <div class='panel-lead'>17-10-2019 13:24:16</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     End
-                    <div class='panel-lead'>16-10-2019 16:04:06</div>
+                    <div class='panel-lead'>17-10-2019 13:24:41</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     Time Taken
-                    <div class='panel-lead'>00:01:26.7466027</div>
+                    <div class='panel-lead'>00:00:24.7255784</div>
                 </div>
             </div>
 
@@ -435,20 +400,20 @@
 
 		<script>
 			var statusGroup = {
-			    passParent: 0,
-			    failParent: 1,
+			    passParent: 1,
+			    failParent: 0,
 			    fatalParent: 0,
 			    errorParent: 0,
 			    warningParent: 0,
 			    skipParent: 0,
 				
-			    passChild: 7,
-			    failChild: 2,
+			    passChild: 13,
+			    failChild: 0,
 			    fatalChild: 0,
 			    errorChild: 0,
 			    warningChild: 0,
 			    skipChild: 0,
-			    infoChild: 9,
+			    infoChild: 4,
 				
 			    passGrandChild: 0,
 			    failGrandChild: 0,

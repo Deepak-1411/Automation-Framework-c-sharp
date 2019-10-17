@@ -32,11 +32,20 @@ namespace Basics
         static ExtentHtmlReporter extentHtmlReport;
         static ExtentTest test = null;
         static ExtentReports report = null;
-       
+       static  string path = System.IO.Directory.GetCurrentDirectory();
+        String cwd = Directory.GetCurrentDirectory();
+        static DirectoryInfo path1 = Directory.GetParent(path);
+        static DirectoryInfo path2 = Directory.GetParent(path1.ToString());
+        static String currentpath = path2.ToString();
+        static String picspath = currentpath + "\\screenshots";
+        static String reportpath = currentpath + "\\reports";
+        
+
 
         public static void Script(String jsonpath,String testname)
         {
-          
+
+            Directory.CreateDirectory(picspath);
             JObject data = JObject.Parse(File.ReadAllText(@jsonpath));
             var data1 = (JArray)data["scriptstep"];
             var count = (data1.Count);
@@ -406,32 +415,32 @@ namespace Basics
             }
             catch (Exception)
             {
-
                 Console.WriteLine("Element not Found: " + loc);
             }
             return elem;
         }
 
         public static void  TakesScreenshot(String stepdescription) {
-            ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(@"D:\csharp\pics\" + "_" + stepdescription + ".jpeg", ScreenshotImageFormat.Jpeg);
-            test.AddScreenCaptureFromPath("D:\\csharp\\pics\\" + "_" + stepdescription + ".jpeg");
+            
+         Console.WriteLine("Current working directory : " + currentpath);
+          ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(picspath +"\\"+ "_" + stepdescription + ".jpeg", ScreenshotImageFormat.Jpeg);
+          test.AddScreenCaptureFromPath(picspath +"\\"+ "_" + stepdescription + ".jpeg");
             
 
         }
         public static void Main(String[] args) {
-
-           Script("D:\\csharp\\JsonData\\test1.json","Scenario1");
-           Script("D:\\csharp\\JsonData\\test2.json", "Scenario2");
-           Script("D:\\csharp\\JsonData\\test3.json", "Scenario3");
-           Script("C:\\Users\\MR\\Downloads\\testJSONBoA.json","BankOfAmerica");
+          Script("D:\\csharp\\JsonData\\test1.json","Scenario1");
+        ///  Script("D:\\csharp\\JsonData\\test2.json", "Scenario2");
+        //  Script("D:\\csharp\\JsonData\\test3.json", "Scenario3");
+        //  Script("C:\\Users\\MR\\Downloads\\testJSONBoA.json","BankOfAmerica");
 
         }
 
         public static  void ExtentReportGeneration(String Testname) {
             String date = DateTime.Now.ToString("HH:mm:ss");
             String date1 = date.Replace(":", "_");
-            var path = "D:\\csharp\\Basics\\Basics\\reports";
-            extentHtmlReport = new ExtentHtmlReporter(path + "\\AutomationReport"+ Testname+"_"+ date1 + ".html");
+          
+            extentHtmlReport = new ExtentHtmlReporter(reportpath + "\\AutomationReport"+ Testname+"_"+ date1 + ".html");
             report = new AventStack.ExtentReports.ExtentReports();
             report.AttachReporter(extentHtmlReport);
             test = report.CreateTest(Testname);

@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TakeCWD.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
